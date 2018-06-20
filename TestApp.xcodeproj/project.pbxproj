@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3BD4AC8875EB12CE640D3BD8 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E990565B912E9B71FE88B /* Pods_TestApp.framework */; };
 		B139703820DA3F64002D9DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139703720DA3F64002D9DFC /* AppDelegate.swift */; };
-		B139703A20DA3F64002D9DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139703920DA3F64002D9DFC /* ViewController.swift */; };
-		B139703D20DA3F64002D9DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139703B20DA3F64002D9DFC /* Main.storyboard */; };
 		B139703F20DA3F66002D9DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139703E20DA3F66002D9DFC /* Assets.xcassets */; };
 		B139704220DA3F66002D9DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139704020DA3F66002D9DFC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		1E1E990565B912E9B71FE88B /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B139703420DA3F64002D9DFC /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B139703720DA3F64002D9DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B139703920DA3F64002D9DFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B139703C20DA3F64002D9DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B139703E20DA3F66002D9DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B139704120DA3F66002D9DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B139704320DA3F66002D9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				B139703720DA3F64002D9DFC /* AppDelegate.swift */,
-				B139703920DA3F64002D9DFC /* ViewController.swift */,
-				B139703B20DA3F64002D9DFC /* Main.storyboard */,
 				B139703E20DA3F66002D9DFC /* Assets.xcassets */,
 				B139704020DA3F66002D9DFC /* LaunchScreen.storyboard */,
 				B139704320DA3F66002D9DFC /* Info.plist */,
@@ -150,7 +144,6 @@
 			files = (
 				B139704220DA3F66002D9DFC /* LaunchScreen.storyboard in Resources */,
 				B139703F20DA3F66002D9DFC /* Assets.xcassets in Resources */,
-				B139703D20DA3F64002D9DFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B139703A20DA3F64002D9DFC /* ViewController.swift in Sources */,
 				B139703820DA3F64002D9DFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,14 +210,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B139703B20DA3F64002D9DFC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B139703C20DA3F64002D9DFC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B139704020DA3F66002D9DFC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,7 +343,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -375,7 +362,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
