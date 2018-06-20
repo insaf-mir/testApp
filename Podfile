@@ -7,4 +7,5 @@ target 'TestApp' do
     pod 'RxDataSources'
     pod 'SnapKit'
     pod 'SDWebImage'
+    pod 'VK-ios-sdk'
 end

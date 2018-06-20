@@ -11,6 +11,7 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SnapKit (4.0.0)
+  - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
   - RxCocoa (~> 4.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SDWebImage
   - SnapKit
+  - VK-ios-sdk
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - RxSwift
     - SDWebImage
     - SnapKit
+    - VK-ios-sdk
 
 SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
@@ -35,7 +38,8 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: e99489bfc05c784f5f09b712b27d1053c2b52fd2
+PODFILE CHECKSUM: 0586683b0ec29e4e3d2d5b00ef38757994a57586
 
 COCOAPODS: 1.5.0
