@@ -41,7 +41,7 @@ extension LoginController {
     
     @objc
     private func loginAction() {
-        let permissions = ["friends"]
+        let permissions = [VK_PER_FRIENDS]
         VKSdk.authorize(permissions)
     }
 }
@@ -58,12 +58,17 @@ extension LoginController: VKSdkUIDelegate {
 
 extension LoginController: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        if result.state == .authorized {
-            
+        print(result.state)
+        if result.token != nil {
+            let controller = FriendsListController()
+            navigationController?.pushViewController(controller, animated: true)
             return
         }
-        let alert = UIAlertController(title: "Ошибка", message: "Не удалось авторизоваться в контакте", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Ошибка", message: "Не удалось авторизоваться в контакте", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func vkSdkUserAuthorizationFailed() {
