@@ -8,4 +8,5 @@ target 'TestApp' do
     pod 'SnapKit'
     pod 'SDWebImage'
     pod 'VK-ios-sdk'
+    pod 'SVPullToRefresh'
 end
