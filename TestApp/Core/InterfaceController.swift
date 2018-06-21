@@ -18,7 +18,7 @@ class InterfaceController: NSObject {
     }
     
     func openInitialScreen() {
-        window.rootViewController = UINavigationController(rootViewController: UIViewController())
+        window.rootViewController = UINavigationController(rootViewController: LoginController())
         window.backgroundColor = .white
         window.makeKeyAndVisible()
     }    

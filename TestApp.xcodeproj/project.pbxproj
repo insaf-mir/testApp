@@ -12,6 +12,9 @@
 		B139703F20DA3F66002D9DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139703E20DA3F66002D9DFC /* Assets.xcassets */; };
 		B139704220DA3F66002D9DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139704020DA3F66002D9DFC /* LaunchScreen.storyboard */; };
 		B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704B20DA4666002D9DFC /* InterfaceController.swift */; };
+		B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704D20DA4FEB002D9DFC /* CommonConstants.swift */; };
+		B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394920DC212400DD64C0 /* LoginController.swift */; };
+		B1E7394C20DC298000DD64C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394B20DC298000DD64C0 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B139704120DA3F66002D9DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B139704320DA3F66002D9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B139704B20DA4666002D9DFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B139704D20DA4FEB002D9DFC /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		B1E7394920DC212400DD64C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B1E7394B20DC298000DD64C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C4323ED67365694BAA1F13BF /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EF965CF06C04D5C8C07DB661 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +86,7 @@
 		B139704920DA4394002D9DFC /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				B1E7394820DC210D00DD64C0 /* Login */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -88,8 +95,26 @@
 			isa = PBXGroup;
 			children = (
 				B139704B20DA4666002D9DFC /* InterfaceController.swift */,
+				B139704D20DA4FEB002D9DFC /* CommonConstants.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B1E7394820DC210D00DD64C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7394D20DC2A2500DD64C0 /* Views */,
+				B1E7394920DC212400DD64C0 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B1E7394D20DC2A2500DD64C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7394B20DC298000DD64C0 /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED269AD7C8174FCBD45FB830 /* Pods */ = {
@@ -225,6 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B139703820DA3F64002D9DFC /* AppDelegate.swift in Sources */,
+				B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */,
+				B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */,
+				B1E7394C20DC298000DD64C0 /* LoginView.swift in Sources */,
 				B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +393,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -381,7 +412,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
