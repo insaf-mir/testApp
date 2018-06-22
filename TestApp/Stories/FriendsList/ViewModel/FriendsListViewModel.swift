@@ -14,7 +14,10 @@ class FriendsListViewModel {
     let pageSize = 50
     let disposeBag = DisposeBag()
     let friends = BehaviorRelay<[FriendViewModel]>(value: [])
-    
+    let isEnableInfiniteScroll = BehaviorRelay<Bool>(value: true)
+    let isEndLoadNextPage = BehaviorRelay<Bool>(value: true)
+    let isEndUpdate = BehaviorRelay<Bool>(value: true)
+
     func fetchData() {
         let params: [String: Any] = ["fields": ["nickname", "photo_100"],
                                      "count": pageSize]
@@ -33,7 +36,26 @@ class FriendsListViewModel {
                                      "offset": friends.value.count]
         let request = VKApi.friends().get(params)
         request?.execute(resultBlock: { response in
-            let viewModels = self.friends.value + self.map(from: response)
+            self.isEndLoadNextPage.accept(self.isEndLoadNextPage.value == false)
+            let responseModels = self.map(from: response)
+            let viewModels = self.friends.value + responseModels
+            if responseModels.count == 0 {
+                print("empty result")
+            }
+            self.isEnableInfiniteScroll.accept(responseModels.count > 0)
+            self.friends.accept(viewModels)
+        }, errorBlock: { error in
+            print(error ?? "")
+        })
+    }
+    
+    func updateData() {
+        let params: [String: Any] = ["fields": ["nickname", "photo_100"],
+                                     "count": friends.value.count]
+        let request = VKApi.friends().get(params)
+        request?.execute(resultBlock: { response in
+            self.isEndUpdate.accept(self.isEndUpdate.value == false)
+            let viewModels = self.map(from: response)
             self.friends.accept(viewModels)
         }, errorBlock: { error in
             print(error ?? "")
@@ -51,8 +73,8 @@ class FriendsListViewModel {
             guard
                 let name = model.first_name as? String,
                 let surname = model.last_name as? String
-                else {
-                    return nil
+            else {
+                return nil
             }
             return FriendViewModel(id: model.id.intValue,
                                    name: "\(name) \(surname)",
