@@ -12,7 +12,7 @@ import VK_ios_sdk
 class LoginController: UIViewController {
     
     lazy var contentView = LoginView(frame: UIScreen.main.bounds)
-    
+    let interfaceController = InterfaceController.shared
     lazy var vkSdk: VKSdk = {
         if VKSdk.initialized() {
             return VKSdk.instance()
@@ -60,8 +60,7 @@ extension LoginController: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         print(result.state)
         if result.token != nil {
-            let controller = FriendsListController()
-            navigationController?.pushViewController(controller, animated: true)
+            self.interfaceController.openFriendsList()
             return
         }
         DispatchQueue.main.async {

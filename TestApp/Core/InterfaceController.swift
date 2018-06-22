@@ -11,14 +11,20 @@ import UIKit
 class InterfaceController: NSObject {
     let window: UIWindow
     static let shared = InterfaceController()
-    
+    private var navigationController: UINavigationController?
     override init() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         super.init()
     }
     
+    func openFriendsList() {
+        let controller = FriendsListController()
+        navigationController?.setViewControllers([controller], animated: true)
+    }
+    
     func openInitialScreen() {
-        window.rootViewController = UINavigationController(rootViewController: LoginController())
+        navigationController = UINavigationController(rootViewController: LoginController())
+        window.rootViewController = navigationController
         window.backgroundColor = .white
         window.makeKeyAndVisible()
     }    
