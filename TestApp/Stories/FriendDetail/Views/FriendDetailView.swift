@@ -26,6 +26,9 @@ class FriendDetailView: UIView {
     }()
 
     lazy var friendInfoView = FriendInfoView()
+    lazy var friendActionsView = FriendActionView()
+    lazy var segmentedContainer = UIView()
+    lazy var segmentedView = SegmentedView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,7 +36,10 @@ class FriendDetailView: UIView {
         addSubview(contentView)
         contentView.addSubview(scrollView)
         scrollView.addSubview(stackView)
+        segmentedContainer.addSubview(segmentedView)
         stackView.addArrangedSubview(friendInfoView)
+        stackView.addArrangedSubview(friendActionsView)
+        stackView.addArrangedSubview(segmentedContainer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,6 +57,9 @@ class FriendDetailView: UIView {
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
+        }
+        segmentedView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
         }
     }
 

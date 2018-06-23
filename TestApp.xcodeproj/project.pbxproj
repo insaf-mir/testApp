@@ -14,6 +14,8 @@
 		B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704B20DA4666002D9DFC /* InterfaceController.swift */; };
 		B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704D20DA4FEB002D9DFC /* CommonConstants.swift */; };
 		B15715A220DE497600B37EE3 /* FriendInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15715A120DE497600B37EE3 /* FriendInfoView.swift */; };
+		B15715A520DE5D0500B37EE3 /* FriendActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15715A420DE5D0500B37EE3 /* FriendActionsView.swift */; };
+		B15715A720DE628F00B37EE3 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15715A620DE628F00B37EE3 /* SegmentedView.swift */; };
 		B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394920DC212400DD64C0 /* LoginController.swift */; };
 		B1E7394C20DC298000DD64C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394B20DC298000DD64C0 /* LoginView.swift */; };
 		B1E7395220DC2C3400DD64C0 /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7395120DC2C3400DD64C0 /* FriendsListController.swift */; };
@@ -36,6 +38,8 @@
 		B139704B20DA4666002D9DFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		B139704D20DA4FEB002D9DFC /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
 		B15715A120DE497600B37EE3 /* FriendInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoView.swift; sourceTree = "<group>"; };
+		B15715A420DE5D0500B37EE3 /* FriendActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActionsView.swift; sourceTree = "<group>"; };
+		B15715A620DE628F00B37EE3 /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		B1E7394920DC212400DD64C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B1E7394B20DC298000DD64C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B1E7395120DC2C3400DD64C0 /* FriendsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListController.swift; sourceTree = "<group>"; };
@@ -122,13 +126,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		B15715A320DE520300B37EE3 /* VewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VewModels;
-			sourceTree = "<group>";
-		};
 		B1E7394820DC210D00DD64C0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +189,6 @@
 		B1E7396E20DD54CC00DD64C0 /* FriendDetail */ = {
 			isa = PBXGroup;
 			children = (
-				B15715A320DE520300B37EE3 /* VewModels */,
 				B1E7396F20DD54DA00DD64C0 /* Views */,
 				B1E7397020DD54ED00DD64C0 /* FriendDetailController.swift */,
 			);
@@ -204,6 +200,8 @@
 			children = (
 				B1E7397220DD54FE00DD64C0 /* FriendDetailView.swift */,
 				B15715A120DE497600B37EE3 /* FriendInfoView.swift */,
+				B15715A420DE5D0500B37EE3 /* FriendActionsView.swift */,
+				B15715A620DE628F00B37EE3 /* SegmentedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +345,7 @@
 				B1E7397120DD54ED00DD64C0 /* FriendDetailController.swift in Sources */,
 				B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */,
 				B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */,
+				B15715A720DE628F00B37EE3 /* SegmentedView.swift in Sources */,
 				B1E7395A20DC320100DD64C0 /* FriendCell.swift in Sources */,
 				B15715A220DE497600B37EE3 /* FriendInfoView.swift in Sources */,
 				B1E7395520DC2C6300DD64C0 /* FriendsListView.swift in Sources */,
@@ -356,6 +355,7 @@
 				B1E7397320DD54FE00DD64C0 /* FriendDetailView.swift in Sources */,
 				B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */,
 				B1E7395F20DC358500DD64C0 /* UITableViewCellExtension.swift in Sources */,
+				B15715A520DE5D0500B37EE3 /* FriendActionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,5 +30,16 @@ class FriendDetailController: UIViewController {
         title = viewModel.name
         contentView.makeConstraints(in: self)
         contentView.friendInfoView.configure(viewModel)
+        contentView.segmentedView.configure(with: prepareSegmentedViewModels())
+    }
+    
+    // test data
+    private func prepareSegmentedViewModels() -> [SegmentViewModel] {
+        let titles = ["1,2K","23","365","223","123","456","354"]
+        let subtitles = ["friends","in common","followers","photos","videos","audios","presents"]
+        let viewModels: [SegmentViewModel] = titles.enumerated().map {
+            return SegmentViewModel(title: $0.element, subtitle: subtitles[$0.offset])
+        }
+        return viewModels
     }
 }

@@ -13,8 +13,7 @@ class FriendsListView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = .none
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = 70
         tableView.register(FriendCell.self, forCellReuseIdentifier: FriendCell.dlReuseIdentifier)
         return tableView
     }()
