@@ -19,7 +19,7 @@ class FriendsListViewModel {
     let isEndUpdate = BehaviorRelay<Bool>(value: true)
 
     func fetchData() {
-        let params: [String: Any] = ["fields": ["nickname", "photo_100"],
+        let params: [String: Any] = ["fields": ["nickname", "photo_100", "last_seen", "city"],
                                      "count": pageSize]
         let request = VKApi.friends().get(params)
         request?.execute(resultBlock: { response in
@@ -31,7 +31,7 @@ class FriendsListViewModel {
     }
     
     func fetchNextPage() {
-        let params: [String: Any] = ["fields": ["nickname", "photo_100"],
+        let params: [String: Any] = ["fields": ["nickname", "photo_100", "last_seen", "city"],
                                      "count": pageSize,
                                      "offset": friends.value.count]
         let request = VKApi.friends().get(params)
@@ -39,9 +39,6 @@ class FriendsListViewModel {
             self.isEndLoadNextPage.accept(self.isEndLoadNextPage.value == false)
             let responseModels = self.map(from: response)
             let viewModels = self.friends.value + responseModels
-            if responseModels.count == 0 {
-                print("empty result")
-            }
             self.isEnableInfiniteScroll.accept(responseModels.count > 0)
             self.friends.accept(viewModels)
         }, errorBlock: { error in
@@ -50,7 +47,7 @@ class FriendsListViewModel {
     }
     
     func updateData() {
-        let params: [String: Any] = ["fields": ["nickname", "photo_100"],
+        let params: [String: Any] = ["fields": ["nickname", "photo_100", "last_seen", "city"],
                                      "count": friends.value.count]
         let request = VKApi.friends().get(params)
         request?.execute(resultBlock: { response in
@@ -70,15 +67,28 @@ class FriendsListViewModel {
             return []
         }
         let viewModels: [FriendViewModel] = friends.compactMap { model -> FriendViewModel? in
+            // пришлось кастовать из-за неправильного бриджинга из модели написанного на objc в свифт
             guard
                 let name = model.first_name as? String,
-                let surname = model.last_name as? String
+                let surname = model.last_name as? String,
+                let cityModel = model.city as? VKCity,
+                let city = cityModel.title as? String,
+                self.friends.value.first(where: { friend -> Bool in
+                    return friend.id == model.id.intValue
+                }) == nil
             else {
                 return nil
             }
+            let lastSeen = Date(timeIntervalSince1970: model.last_seen.time.doubleValue)
+            let df = DateFormatter()
+            df.dateFormat = "HH:mm"
+            let lastSeenString = "last seen today at " + df.string(from: lastSeen)
             return FriendViewModel(id: model.id.intValue,
                                    name: "\(name) \(surname)",
-                imageUrl: model.photo_100)
+                                   imageUrl: model.photo_100,
+                                   city: city,
+                                   lastSeen: lastSeenString
+                   )
         }
         return viewModels
     }
@@ -88,4 +98,6 @@ struct FriendViewModel {
     let id: Int
     let name: String
     let imageUrl: String
+    let city: String
+    let lastSeen: String
 }

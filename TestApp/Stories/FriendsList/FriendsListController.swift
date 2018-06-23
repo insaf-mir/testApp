@@ -30,6 +30,7 @@ class FriendsListController: UIViewController {
         super.viewDidLoad()
         title = "Friends"
         contentView.makeConstraints(in: self)
+        contentView.tableView.delegate = self
         bind()
         viewModel.fetchData()
         contentView.tableView.addPullToRefresh {
@@ -73,6 +74,13 @@ class FriendsListController: UIViewController {
                 self.contentView.tableView.pullToRefreshView.stopAnimating()
             })
             .disposed(by: disposeBag)
+    }
+}
 
+extension FriendsListController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let friendViewModel = viewModel.friends.value[indexPath.row]
+        let controller = FriendDetailController(viewModel: friendViewModel)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

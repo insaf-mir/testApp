@@ -13,6 +13,7 @@
 		B139704220DA3F66002D9DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139704020DA3F66002D9DFC /* LaunchScreen.storyboard */; };
 		B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704B20DA4666002D9DFC /* InterfaceController.swift */; };
 		B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139704D20DA4FEB002D9DFC /* CommonConstants.swift */; };
+		B15715A220DE497600B37EE3 /* FriendInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15715A120DE497600B37EE3 /* FriendInfoView.swift */; };
 		B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394920DC212400DD64C0 /* LoginController.swift */; };
 		B1E7394C20DC298000DD64C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7394B20DC298000DD64C0 /* LoginView.swift */; };
 		B1E7395220DC2C3400DD64C0 /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7395120DC2C3400DD64C0 /* FriendsListController.swift */; };
@@ -21,6 +22,8 @@
 		B1E7395A20DC320100DD64C0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7395920DC320100DD64C0 /* FriendCell.swift */; };
 		B1E7395D20DC333D00DD64C0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7395C20DC333D00DD64C0 /* UIColorExtension.swift */; };
 		B1E7395F20DC358500DD64C0 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7395E20DC358500DD64C0 /* UITableViewCellExtension.swift */; };
+		B1E7397120DD54ED00DD64C0 /* FriendDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7397020DD54ED00DD64C0 /* FriendDetailController.swift */; };
+		B1E7397320DD54FE00DD64C0 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7397220DD54FE00DD64C0 /* FriendDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,7 @@
 		B139704320DA3F66002D9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B139704B20DA4666002D9DFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		B139704D20DA4FEB002D9DFC /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		B15715A120DE497600B37EE3 /* FriendInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoView.swift; sourceTree = "<group>"; };
 		B1E7394920DC212400DD64C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B1E7394B20DC298000DD64C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B1E7395120DC2C3400DD64C0 /* FriendsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		B1E7395920DC320100DD64C0 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		B1E7395C20DC333D00DD64C0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B1E7395E20DC358500DD64C0 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		B1E7397020DD54ED00DD64C0 /* FriendDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailController.swift; sourceTree = "<group>"; };
+		B1E7397220DD54FE00DD64C0 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
 		C4323ED67365694BAA1F13BF /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EF965CF06C04D5C8C07DB661 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +105,7 @@
 		B139704920DA4394002D9DFC /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				B1E7396E20DD54CC00DD64C0 /* FriendDetail */,
 				B1E7395020DC2C1A00DD64C0 /* FriendsList */,
 				B1E7394820DC210D00DD64C0 /* Login */,
 			);
@@ -113,6 +120,13 @@
 				B139704D20DA4FEB002D9DFC /* CommonConstants.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B15715A320DE520300B37EE3 /* VewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VewModels;
 			sourceTree = "<group>";
 		};
 		B1E7394820DC210D00DD64C0 /* Login */ = {
@@ -173,6 +187,25 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B1E7396E20DD54CC00DD64C0 /* FriendDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B15715A320DE520300B37EE3 /* VewModels */,
+				B1E7396F20DD54DA00DD64C0 /* Views */,
+				B1E7397020DD54ED00DD64C0 /* FriendDetailController.swift */,
+			);
+			path = FriendDetail;
+			sourceTree = "<group>";
+		};
+		B1E7396F20DD54DA00DD64C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7397220DD54FE00DD64C0 /* FriendDetailView.swift */,
+				B15715A120DE497600B37EE3 /* FriendInfoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED269AD7C8174FCBD45FB830 /* Pods */ = {
@@ -311,13 +344,16 @@
 			files = (
 				B1E7395820DC30CA00DD64C0 /* FriendsListViewModel.swift in Sources */,
 				B139703820DA3F64002D9DFC /* AppDelegate.swift in Sources */,
+				B1E7397120DD54ED00DD64C0 /* FriendDetailController.swift in Sources */,
 				B1E7394A20DC212400DD64C0 /* LoginController.swift in Sources */,
 				B139704E20DA4FEB002D9DFC /* CommonConstants.swift in Sources */,
 				B1E7395A20DC320100DD64C0 /* FriendCell.swift in Sources */,
+				B15715A220DE497600B37EE3 /* FriendInfoView.swift in Sources */,
 				B1E7395520DC2C6300DD64C0 /* FriendsListView.swift in Sources */,
 				B1E7395220DC2C3400DD64C0 /* FriendsListController.swift in Sources */,
 				B1E7395D20DC333D00DD64C0 /* UIColorExtension.swift in Sources */,
 				B1E7394C20DC298000DD64C0 /* LoginView.swift in Sources */,
+				B1E7397320DD54FE00DD64C0 /* FriendDetailView.swift in Sources */,
 				B139704C20DA4666002D9DFC /* InterfaceController.swift in Sources */,
 				B1E7395F20DC358500DD64C0 /* UITableViewCellExtension.swift in Sources */,
 			);
@@ -459,7 +495,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -475,7 +514,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.friends.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

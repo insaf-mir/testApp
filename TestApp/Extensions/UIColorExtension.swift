@@ -17,4 +17,9 @@ extension UIColor {
             alpha: 1
         )
     }
+    
+    open static var defaultBlue: UIColor {
+        return .colorFromHex(0x5A80B3)
+    }
+
 }
