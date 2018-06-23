@@ -24,6 +24,8 @@ class InterfaceController: NSObject {
     
     func openInitialScreen() {
         navigationController = UINavigationController(rootViewController: LoginController())
+        navigationController?.navigationBar.barTintColor = .defaultBlue
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         window.rootViewController = navigationController
         window.backgroundColor = .white
         window.makeKeyAndVisible()

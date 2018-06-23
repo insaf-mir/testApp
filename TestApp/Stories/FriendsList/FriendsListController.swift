@@ -22,6 +22,10 @@ class FriendsListController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func loadView() {
         view = contentView
     }

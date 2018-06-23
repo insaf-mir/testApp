@@ -17,6 +17,14 @@ class FriendDetailController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override var navigationItem: UINavigationItem {
+        return configureDefaultNavigationItem(for: super.navigationItem)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
